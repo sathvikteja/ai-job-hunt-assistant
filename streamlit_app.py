@@ -2,6 +2,8 @@ import streamlit as st
 
 from usajobs_api import fetch_usajobs
 from orchestrator import run_pipeline
+from utils.job_matcher import compute_similarity
+from utils.skill_analyzer import skill_gap_analysis
 
 
 st.set_page_config(
@@ -17,16 +19,12 @@ This app uses AI agents to help with your job search.
 
 The system will:
 
-1. Analyze job descriptions
-2. Generate a tailored resume summary
-3. Generate a cover letter
-4. Generate an outreach message
+• Recommend jobs using semantic similarity  
+• Analyze job descriptions  
+• Show matching and missing skills  
+• Generate resume summaries, cover letters, and outreach messages
 """)
 
-
-# -----------------------------
-# User Inputs
-# -----------------------------
 
 candidate_name = st.text_input(
     "Your Name",
@@ -54,9 +52,9 @@ bio = st.text_input(
 )
 
 
-# -----------------------------
-# Fetch jobs
-# -----------------------------
+# -------------------------------------------------
+# Fetch Jobs
+# -------------------------------------------------
 
 if st.button("Run Job Hunt Assistant"):
 
@@ -65,19 +63,41 @@ if st.button("Run Job Hunt Assistant"):
     jobs = fetch_usajobs(keyword, location)
 
     if not jobs:
-        st.error("No jobs found for this keyword/location.")
+
+        st.error("No jobs found.")
+
     else:
 
-        st.session_state.jobs = jobs[:5]
+        jobs = jobs[:5]
+
+        job_descriptions = []
+
+        for job in jobs:
+
+            details = job["MatchedObjectDescriptor"]["UserArea"]["Details"]
+
+            summary = details.get("JobSummary", "")
+            duties = details.get("MajorDuties", "")
+            qualifications = details.get("Qualifications", "")
+
+            job_text = f"{summary} {duties} {qualifications}"
+
+            job_descriptions.append(job_text)
+
+        scores = compute_similarity(resume_text, job_descriptions)
+
+        st.session_state.jobs = jobs
+        st.session_state.job_texts = job_descriptions
+        st.session_state.scores = scores
 
 
-# -----------------------------
-# Show jobs
-# -----------------------------
+# -------------------------------------------------
+# Show Jobs
+# -------------------------------------------------
 
 if "jobs" in st.session_state:
 
-    st.subheader("Select Jobs to Apply")
+    st.subheader("🎯 Recommended Jobs")
 
     selected_jobs = []
 
@@ -88,8 +108,62 @@ if "jobs" in st.session_state:
         title = descriptor["PositionTitle"]
         agency = descriptor["OrganizationName"]
 
-        if st.checkbox(f"{title} — {agency}", key=i):
+        summary = descriptor["UserArea"]["Details"]["JobSummary"]
+
+        job_text = st.session_state.job_texts[i]
+
+        score = st.session_state.scores[i]
+
+        st.markdown("---")
+
+        st.subheader(f"{title} — {agency}")
+
+        st.metric("Match Score", f"{score*100:.1f}%")
+
+        st.write(summary)
+
+
+        # -------------------------------------------------
+        # Skill Analysis
+        # -------------------------------------------------
+
+        matching, missing = skill_gap_analysis(
+            resume_text,
+            job_text
+        )
+
+        if not matching and not missing:
+
+            st.info("⚠ Unable to detect technical skills from this job description.")
+
+        else:
+
+            st.markdown("### ✅ Matching Skills")
+
+            if matching:
+                for skill in matching:
+                    st.write(f"✔ {skill}")
+            else:
+                st.write("No matching skills found.")
+
+
+            st.markdown("### ⚠ Missing Skills")
+
+            if missing:
+                for skill in missing:
+                    st.write(f"✖ {skill}")
+            else:
+                st.write("No missing skills detected.")
+
+
+        if st.checkbox("Apply to this job", key=i):
+
             selected_jobs.append(job)
+
+
+# -------------------------------------------------
+# Run AI Agents
+# -------------------------------------------------
 
     if st.button("Apply to Selected Jobs"):
 
@@ -98,12 +172,14 @@ if "jobs" in st.session_state:
             descriptor = job["MatchedObjectDescriptor"]
 
             title = descriptor["PositionTitle"]
-            agency = descriptor["OrganizationName"]
-
-            st.markdown(f"## {title}")
-            st.markdown("### Job Description")
 
             summary = descriptor["UserArea"]["Details"]["JobSummary"]
+
+            st.markdown("---")
+
+            st.markdown(f"## {title}")
+
+            st.markdown("### Job Description")
 
             st.write(summary)
 
@@ -117,4 +193,5 @@ if "jobs" in st.session_state:
                 )
 
             st.markdown("### ✨ AI Generated Output")
+
             st.write(result)

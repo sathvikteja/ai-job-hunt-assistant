@@ -1,0 +1,16 @@
+<<RESUME_SUMMARY>>
+Highly motivated and detail-oriented Data Scientist with a strong foundation in machine learning and natural language processing. Proficient in Python, with expertise in building recommendation systems, sequence models, and AI pipelines. Proven ability to work on innovative projects, such as building a movie recommendation system and AI job hunt assistant. Skilled in implementing POS tagging using Hidden Markov Models and improving tagging accuracy with smoothing techniques. Strong interest in Artificial Intelligence, Machine Learning, and Natural Language Processing. Seeking a challenging role as an IT Specialist (Data Scientist) where I can leverage my skills and experience to drive business outcomes.
+
+<<COVER_LETTER>>
+Dear Hiring Manager,
+
+I am excited to apply for the IT Specialist (Data Scientist) position through the Office of Personnel Management's delegated Direct Hire Authority. As a highly motivated and detail-oriented Data Scientist, I am confident that my skills and experience make me an ideal candidate for this role.
+
+With a strong foundation in machine learning and natural language processing, I possess a unique blend of technical skills and creative problem-solving abilities. My proficiency in Python, combined with my expertise in building recommendation systems, sequence models, and AI pipelines, has enabled me to work on innovative projects that drive business outcomes.
+
+As a data-driven professional, I am passionate about leveraging data insights to inform decision-making and drive strategic business growth. My experience in building a movie recommendation system and AI job hunt assistant has taught me the importance of collaboration, communication, and attention to detail. I am excited about the opportunity to bring my skills and experience to a challenging role as an IT Specialist (Data Scientist) and contribute to the success of your team.
+
+Thank you for considering my application. I would welcome the opportunity to discuss my qualifications further and explain in greater detail why I am the ideal candidate for this role. Please feel free to contact me at your earliest convenience.
+
+Sincerely,
+Sathvik Teja
