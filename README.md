@@ -1,79 +1,72 @@
-🤖 AI Job Hunt Assistant
+# 🤖 AI Job Hunt Assistant
 
-An AI-powered job search assistant that automatically recommends relevant jobs, analyzes skill gaps, and generates personalized application materials using multi-agent AI and semantic similarity models.
+An **AI-powered job search assistant** that automatically recommends relevant jobs, analyzes skill gaps, and generates personalized application materials using **multi-agent AI and semantic similarity models**.
 
-The system helps candidates discover suitable jobs, understand missing skills, and generate professional outreach messages using AI.
+The system helps candidates **discover suitable jobs, understand missing skills, and generate professional outreach messages** using AI.
 
-🚀 Features
-🔎 Semantic Job Recommendation
+---
 
-Jobs are ranked using sentence embeddings and cosine similarity between the user's resume and job descriptions.
+# 🚀 Features
 
-🧠 Skill Gap Analysis
+### 🔎 Semantic Job Recommendation
+
+Jobs are ranked using **sentence embeddings and cosine similarity** between the user's resume and job descriptions.
+
+### 🧠 Skill Gap Analysis
 
 The system automatically detects:
 
-✅ Matching skills between resume and job
+* Matching skills between resume and job
+* Missing skills required for the role
 
-⚠ Missing skills required for the role
-
-🤖 AI Agent Pipeline
+### 🤖 AI Agent Pipeline
 
 AI agents collaborate to:
 
-Analyze job descriptions
+* Analyze job descriptions
+* Generate tailored resume summaries
+* Write cover letters
+* Create outreach messages to hiring managers
 
-Generate tailored resume summaries
+### 📊 Intelligent Job Ranking
 
-Write cover letters
+Jobs are ranked based on **semantic similarity scores**, allowing more accurate recommendations than simple keyword matching.
 
-Create outreach messages to hiring managers
+### 🖥 Interactive UI
 
-📊 Intelligent Job Ranking
+A **Streamlit interface** allows users to:
 
-Jobs are ranked based on semantic similarity scores, allowing more accurate recommendations than simple keyword matching.
+* Enter job search parameters
+* Upload or paste resumes
+* View recommended jobs
+* Analyze skill gaps
+* Generate application materials
 
-🖥 Interactive UI
+---
 
-A Streamlit interface allows users to:
+# 🧠 System Architecture
 
-Enter job search parameters
-
-Upload or paste resumes
-
-View recommended jobs
-
-Analyze skill gaps
-
-Generate application materials
-
-🧠 System Architecture
 User Resume
-     │
-     ▼
-Embedding Model
-(Sentence Transformers)
-     │
-     ▼
-Semantic Similarity
-(Cosine Similarity)
-     │
-     ▼
+↓
+Embedding Model (Sentence Transformers)
+↓
+Semantic Similarity (Cosine Similarity)
+↓
 Rank Jobs by Relevance
-     │
-     ▼
+↓
 Skill Gap Analyzer
-     │
-     ▼
-AI Agent Pipeline
-(CrewAI)
-     │
-     ▼
+↓
+AI Agent Pipeline (CrewAI)
+↓
 Generated Outputs
 • Resume Summary
 • Cover Letter
 • Outreach Message
-🧩 Project Structure
+
+---
+
+# 🧩 Project Structure
+
 ai-job-hunt-assistant
 │
 ├── agents
@@ -98,82 +91,82 @@ ai-job-hunt-assistant
 ├── usajobs_api.py
 ├── requirements.txt
 └── README.md
-🧠 Technologies Used
-Machine Learning / NLP
 
-Sentence Transformers
+---
 
-Semantic Embeddings
+# 🧠 Technologies Used
 
-Cosine Similarity
+### Machine Learning / NLP
 
-Skill Extraction
+* Sentence Transformers
+* Semantic Embeddings
+* Cosine Similarity
+* Skill Extraction
 
-AI Frameworks
+### AI Frameworks
 
-CrewAI (multi-agent system)
+* CrewAI (multi-agent system)
+* LLMs for content generation
 
-LLMs for content generation
+### Backend
 
-Backend
+* Python
+* REST APIs
+* USAJobs API
 
-Python
+### Frontend
 
-REST APIs
+* Streamlit
 
-USAJobs API
+### Libraries
 
-Frontend
+* sentence-transformers
+* scikit-learn
+* numpy
+* pandas
 
-Streamlit
+---
 
-Libraries
+# 📊 How Job Recommendation Works
 
-sentence-transformers
+1. User enters resume and job keyword
+2. System fetches jobs using the **USAJobs API**
+3. Job descriptions are converted to **embeddings**
+4. Resume is converted to **embedding vector**
+5. Cosine similarity calculates job relevance
+6. Jobs are ranked based on match score
 
-scikit-learn
+---
 
-numpy
-
-pandas
-
-📊 How Job Recommendation Works
-
-1️⃣ User enters resume and job keyword
-2️⃣ System fetches jobs using the USAJobs API
-3️⃣ Job descriptions are converted to embeddings
-4️⃣ Resume is converted to embedding vector
-5️⃣ Cosine similarity calculates job relevance
-6️⃣ Jobs are ranked based on match score
-
-🧠 Skill Gap Analysis
+# 🧠 Skill Gap Analysis
 
 The system extracts skills from:
 
-Resume
-
-Job description
+* Resume
+* Job description
 
 Then it identifies:
 
 Matching Skills = Resume ∩ Job Skills
-Missing Skills  = Job Skills − Resume Skills
+Missing Skills = Job Skills − Resume Skills
 
-This helps candidates understand what skills they need to improve to qualify for the job.
+This helps candidates understand **what skills they need to improve to qualify for the job**.
 
-🤖 AI Generated Outputs
+---
+
+# 🤖 AI Generated Outputs
 
 The AI pipeline generates:
 
-✨ Resume Summary
+### Resume Summary
 
 Tailored summary based on the job description.
 
-✉ Cover Letter
+### Cover Letter
 
 Automatically generated cover letter aligned with the role.
 
-📩 Outreach Message
+### Outreach Message
 
 Professional message to contact hiring managers.
 
@@ -190,55 +183,74 @@ can contribute to your team.
 
 Best regards,
 Sathvik
-🖥 Application Interface
-Home Page
 
-Job Recommendations
+---
 
-Skill Gap Analysis
+# 🖥 Application Interface
 
-AI Generated Outreach Message
+### Home Page
 
-⚙ Installation
+![Home](screenshots/home_page_ui.png)
+
+### Job Recommendations
+
+![Jobs](screenshots/recommended_jobs.png)
+
+### Skill Gap Analysis
+
+![Skills](screenshots/skill_gap_analysis.png)
+
+### AI Generated Outreach Message
+
+![AI Output](screenshots/ai_outreach_message.png)
+
+---
+
+# ⚙ Installation
 
 Clone the repository:
 
 git clone https://github.com/sathvikteja/ai-job-hunt-assistant.git
+
 cd ai-job-hunt-assistant
 
 Install dependencies:
 
 pip install -r requirements.txt
-▶ Run the Application
+
+---
+
+# ▶ Run the Application
+
 streamlit run streamlit_app.py
 
 The app will start at:
 
 http://localhost:8502
-📈 Future Improvements
 
-RAG-based job knowledge retrieval
+---
 
-Vector database for job storage
+# 📈 Future Improvements
 
-Resume auto-optimization
+* RAG-based job knowledge retrieval
+* Vector database for job storage
+* Resume auto-optimization
+* Skill ontology graph
+* Personalized job alerts
 
-Skill ontology graph
+---
 
-Personalized job alerts
-
-👨‍💻 Author
+# 👨‍💻 Author
 
 Sathvik Teja
 
 Interested in:
 
-Artificial Intelligence
+* Artificial Intelligence
+* Machine Learning
+* NLP
+* Recommendation Systems
 
-Machine Learning
+---
 
-NLP
-
-Recommendation Systems
-
-💡 This project demonstrates how semantic search, AI agents, and NLP can automate and improve the job application process.
+This project demonstrates how **semantic search, AI agents, and NLP can automate and improve the job application process.**
