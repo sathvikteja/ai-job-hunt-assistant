@@ -46,22 +46,24 @@ A **Streamlit interface** allows users to:
 
 # 🧠 System Architecture
 
-User Resume
-↓
-Embedding Model (Sentence Transformers)
-↓
-Semantic Similarity (Cosine Similarity)
-↓
-Rank Jobs by Relevance
-↓
-Skill Gap Analyzer
-↓
+```
+Resume
+  ↓
+Sentence Embeddings (SentenceTransformers)
+  ↓
+Cosine Similarity Matching
+  ↓
+Job Ranking
+  ↓
+Skill Gap Analysis
+  ↓
 AI Agent Pipeline (CrewAI)
-↓
+  ↓
 Generated Outputs
-• Resume Summary
-• Cover Letter
-• Outreach Message
+   ├── Resume Summary
+   ├── Cover Letter
+   └── Outreach Message
+---
 
 ---
 
