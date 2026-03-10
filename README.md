@@ -189,23 +189,30 @@ Sathvik
 
 ---
 
-# 🖥 Application Interface
+## 🖥 Application Interface
 
-### Home Page
+### 🏠 Home Page
 
-![Home](screenshots/home_page_ui.png)
+![Home Page 1](screenshots/1.png)
+![Home Page 2](screenshots/2.png)
+![Home Page 3](screenshots/3.png)
 
-### Job Recommendations
+---
 
-![Jobs](screenshots/recommended_jobs.png)
+### 🎯 Job Recommendations
 
-### Skill Gap Analysis
+![Recommended Jobs 1](screenshots/4.png)
+![Recommended Jobs 2](screenshots/5.png)
+![Recommended Jobs 3](screenshots/6.png)
+![Recommended Jobs 4](screenshots/7.png)
+![Recommended Jobs 5](screenshots/8.png)
 
-![Skills](screenshots/skill_gap_analysis.png)
+---
 
-### AI Generated Outreach Message
+### ✨ AI Generated Outreach Messages
 
-![AI Output](screenshots/ai_outreach_message.png)
+![Outreach Message 1](screenshots/9.png)
+![Outreach Message 2](screenshots/10.png)
 
 ---
 
