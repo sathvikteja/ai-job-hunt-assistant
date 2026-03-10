@@ -58,11 +58,16 @@ Note: Deployment requires a hosted LLM provider (Groq/OpenAI). Local development
 * RAG-based job understanding
 * Deployment with Streamlit Cloud
   
-#DEMO
+#DEMO1
 ![Demo Screenshot](screenshots/appui-1.png)
+#DEMO2
 ![Demo Screenshot](screenshots/appui-2.png)
+#DEMO3
 ![Demo Screenshot](screenshots/appui-3.png)
+#DEMO4
 ![Demo Screenshot](screenshots/appui-4.png)
+#DEMO5
 ![Demo Screenshot](screenshots/appui-5.png)
+#DEMO6
 ![Demo Screenshot](screenshots/appui-6.png)
 
