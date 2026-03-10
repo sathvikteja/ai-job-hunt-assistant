@@ -48,6 +48,7 @@ pip install -r requirements.txt
 Run the app
 
 streamlit run streamlit_app.py
+Note: Deployment requires a hosted LLM provider (Groq/OpenAI). Local development uses Ollama.
 
 ## 📌 Future Improvements
 
