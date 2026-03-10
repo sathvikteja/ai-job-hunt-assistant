@@ -204,6 +204,8 @@ Sathvik
 ![Recommended Jobs 1](screenshots/4.png)
 ![Recommended Jobs 2](screenshots/5.png)
 ![Recommended Jobs 3](screenshots/6.png)
+
+### 🎯Jobs Without Detectable Skills
 ![Recommended Jobs 4](screenshots/7.png)
 ![Recommended Jobs 5](screenshots/8.png)
 
