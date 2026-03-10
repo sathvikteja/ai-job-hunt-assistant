@@ -65,11 +65,9 @@ Generated Outputs
    └── Outreach Message
 ---
 
----
-
 ## 🧩 Project Structure
 
-```
+
 ai-job-hunt-assistant
 │
 ├── 🤖 agents
