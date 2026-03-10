@@ -47,22 +47,22 @@ A **Streamlit interface** allows users to:
 ## 🧠 System Architecture
 
 ```
-Resume
-  ↓
-Sentence Embeddings (SentenceTransformers)
-  ↓
-Cosine Similarity Matching
-  ↓
-Job Ranking
-  ↓
-Skill Gap Analysis
-  ↓
-AI Agent Pipeline (CrewAI)
-  ↓
-Generated Outputs
-   ├── Resume Summary
-   ├── Cover Letter
-   └── Outreach Message
+📄 Resume
+   ↓
+🧠 Sentence Embeddings (SentenceTransformers)
+   ↓
+📏 Cosine Similarity Matching
+   ↓
+🎯 Job Ranking
+   ↓
+🧩 Skill Gap Analysis
+   ↓
+🤖 AI Agent Pipeline (CrewAI)
+   ↓
+✨ Generated Outputs
+   ├── 📝 Resume Summary
+   ├── ✉️ Cover Letter
+   └── 📩 Outreach Message
 ```
 
 ---
@@ -72,28 +72,28 @@ Generated Outputs
 ```
 ai-job-hunt-assistant
 │
-├── agents
+├── 🤖 agents
 │   ├── jd_analyst.py
 │   ├── resume_cl_agent.py
 │   └── messaging_agent.py
 │
-├── utils
+├── 🧠 utils
 │   ├── embeddings.py
 │   ├── job_matcher.py
 │   ├── skill_analyzer.py
 │   ├── config.py
 │   └── tracking.py
 │
-├── data
+├── 📂 data
 │   ├── sample_resume.txt
 │   ├── outreach_message.txt
 │   └── report.md
 │
-├── streamlit_app.py
-├── orchestrator.py
-├── usajobs_api.py
-├── requirements.txt
-└── README.md
+├── 🖥 streamlit_app.py
+├── ⚙ orchestrator.py
+├── 🌐 usajobs_api.py
+├── 📦 requirements.txt
+└── 📘 README.md
 ```
 ---
 
