@@ -1,0 +1,23 @@
+Name: Sathvik Teja
+
+Education:
+B.Tech in Computer Science
+
+Skills:
+Python, Machine Learning, Deep Learning, NLP, Recommendation Systems, SQL, Pandas, NumPy, Scikit-learn, PyTorch
+
+Projects:
+1. Movie Recommendation System
+Built a recommendation engine using collaborative filtering and content-based filtering. Implemented similarity-based recommendation and deployed the system using Streamlit.
+
+2. AI Job Hunt Assistant
+Built a multi-agent AI system using CrewAI and Ollama (Llama3) that analyzes job descriptions and automatically generates tailored resumes and cover letters.
+
+3. NLP POS Tagger
+Implemented POS tagging using Hidden Markov Models and improved tagging accuracy with smoothing techniques.
+
+Experience:
+Worked on machine learning and NLP projects involving recommendation systems, sequence models, and AI pipelines.
+
+Interests:
+Artificial Intelligence, Machine Learning, Natural Language Processing, Recommendation Systems
