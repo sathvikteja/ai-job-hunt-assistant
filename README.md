@@ -1,4 +1,4 @@
-# 🤖 AI Job Hunt Assistant
+# 🤖 Multi-Agent LLM Job Recommendation & Application System
 
 An **AI-powered job search assistant** that automatically recommends relevant jobs, analyzes skill gaps, and generates personalized application materials using **multi-agent AI and semantic similarity models**.
 
