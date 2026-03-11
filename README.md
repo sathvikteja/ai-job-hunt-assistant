@@ -192,23 +192,29 @@ Sathvik
 ## 🖥 Application Interface
 
 ### 🏠 Home Page
-
+#image1
 ![Home Page 1](screenshots/1.png)
+#image2
 ![Home Page 2](screenshots/2.png)
+#image3
 ![Home Page 3](screenshots/3.png)
 
 ---
 
 ### 🎯 Job Recommendations
 
+#image4
 ![Recommended Jobs 1](screenshots/4.png)
+#image5
 ![Recommended Jobs 2](screenshots/5.png)
 
 ---
 
 ### ✨ AI Generated Outreach Messages
 
+#image6
 ![Outreach Message 1](screenshots/6.png)
+#image7
 ![Outreach Message 2](screenshots/7.png)
 
 ---
